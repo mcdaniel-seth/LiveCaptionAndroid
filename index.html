@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#183b38">
+    <title>Live Caption</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="caption-stage" aria-live="polite" aria-atomic="false">
+        <div class="status-row">
+          <div class="brand-mark" aria-hidden="true">CC</div>
+          <div>
+            <h1>Live Caption</h1>
+            <p id="statusText">Ready for English captions</p>
+          </div>
+        </div>
+
+        <div class="caption-window">
+          <p id="finalCaption" class="final-caption">Tap Start and begin speaking.</p>
+          <p id="interimCaption" class="interim-caption"></p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Caption controls">
+        <div class="primary-actions">
+          <button id="startButton" class="action-button start-button" type="button">
+            <span aria-hidden="true">●</span>
+            Start
+          </button>
+          <button id="stopButton" class="action-button stop-button" type="button" disabled>
+            <span aria-hidden="true">■</span>
+            Stop
+          </button>
+        </div>
+
+        <div class="tool-grid">
+          <label>
+            Language
+            <select id="languageSelect">
+              <option value="en-US" selected>English (US)</option>
+              <option value="en-GB">English (UK)</option>
+              <option value="en-AU">English (Australia)</option>
+              <option value="en-CA">English (Canada)</option>
+            </select>
+          </label>
+
+          <label>
+            Caption size
+            <input id="fontSizeRange" type="range" min="28" max="72" value="44">
+          </label>
+
+          <label class="toggle-row">
+            <input id="contrastToggle" type="checkbox">
+            High contrast
+          </label>
+
+          <label class="toggle-row">
+            <input id="keepAwakeToggle" type="checkbox" checked>
+            Keep screen awake
+          </label>
+        </div>
+
+        <div class="secondary-actions">
+          <button id="copyButton" type="button">Copy</button>
+          <button id="downloadButton" type="button">Save TXT</button>
+          <button id="clearButton" type="button">Clear</button>
+        </div>
+      </section>
+
+      <section class="transcript-panel" aria-label="Transcript">
+        <h2>Transcript</h2>
+        <ol id="transcriptList"></ol>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#183b38">
+    <title>Live Caption</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="caption-stage" aria-live="polite" aria-atomic="false">
+        <div class="status-row">
+          <div class="brand-mark" aria-hidden="true">CC</div>
+          <div>
+            <h1>Live Caption</h1>
+            <p id="statusText">Ready for English captions</p>
+          </div>
+        </div>
+
+        <div class="caption-window">
+          <p id="finalCaption" class="final-caption">Tap Start and begin speaking.</p>
+          <p id="interimCaption" class="interim-caption"></p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Caption controls">
+        <div class="primary-actions">
+          <button id="startButton" class="action-button start-button" type="button">
+            <span aria-hidden="true">●</span>
+            Start
+          </button>
+          <button id="stopButton" class="action-button stop-button" type="button" disabled>
+            <span aria-hidden="true">■</span>
+            Stop
+          </button>
+        </div>
+
+        <div class="tool-grid">
+          <label>
+            Language
+            <select id="languageSelect">
+              <option value="en-US" selected>English (US)</option>
+              <option value="en-GB">English (UK)</option>
+              <option value="en-AU">English (Australia)</option>
+              <option value="en-CA">English (Canada)</option>
+            </select>
+          </label>
+
+          <label>
+            Caption size
+            <input id="fontSizeRange" type="range" min="28" max="72" value="44">
+          </label>
+
+          <label class="toggle-row">
+            <input id="contrastToggle" type="checkbox">
+            High contrast
+          </label>
+
+          <label class="toggle-row">
+            <input id="keepAwakeToggle" type="checkbox" checked>
+            Keep screen awake
+          </label>
+        </div>
+
+        <div class="secondary-actions">
+          <button id="copyButton" type="button">Copy</button>
+          <button id="downloadButton" type="button">Save TXT</button>
+          <button id="clearButton" type="button">Clear</button>
+        </div>
+      </section>
+
+      <section class="transcript-panel" aria-label="Transcript">
+        <h2>Transcript</h2>
+        <ol id="transcriptList"></ol>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
